@@ -1,0 +1,38 @@
+<Solution>
+  <Folder Name="/.root/">
+    <File Path=".dockerignore" />
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="readme.md" />
+  </Folder>
+  <Folder Name="/EF6/">
+    <Project Path="EF6/Model/EF6.Bencher.Model.csproj" Id="6524b78a-ca15-41a8-80fa-216a5c99a369" />
+    <Project Path="EF6/Persistence/EF6.Bencher.Persistence.csproj" Id="ac909e22-26d0-47cf-98bc-dd07309d3a77" />
+  </Folder>
+  <Folder Name="/EFCore/">
+    <Project Path="EFCore/EFCore.Dtos.Persistence/EFCore.Dtos.Persistence.csproj" />
+    <Project Path="EFCore/EFCore.Dtos/EFCore.Dtos.csproj" />
+    <Project Path="EFCore/Model/EFCore.Bencher.Model.csproj" />
+    <Project Path="EFCore/Persistence/EFCore.Bencher.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/LinqToDb/">
+    <Project Path="LINQ2DB/DAL/LINQ2DB.Bencher.csproj" Id="06c162e5-0476-40f4-a705-8b5c265bfb68" />
+  </Folder>
+  <Folder Name="/LinqToSql/">
+    <Project Path="L2S/DAL/L2S.Bencher.csproj" Id="59322c25-fcc6-4635-a7ad-dc811f2fd1e0" />
+  </Folder>
+  <Folder Name="/LLBLGenPro/">
+    <Project Path="LLBLGenPro/DatabaseGeneric/AdventureWorks.Dal.Adapter.csproj" />
+    <Project Path="LLBLGenPro/DatabaseSpecific/AdventureWorks.Dal.AdapterDBSpecific.csproj" />
+    <Project Path="LLBLGenPro/LLBLGenPro.Dtos.Persistence/LLBLGenPro.Dtos.Persistence.csproj" />
+    <Project Path="LLBLGenPro/LLBLGenPro.Dtos/LLBLGenPro.Dtos.csproj" />
+  </Folder>
+  <Folder Name="/NHibernate/">
+    <Project Path="NH/DAL/Model/NH.Bencher.Model.csproj" />
+    <Project Path="NH/DAL/Persistence/NH.Bencher.Persistence.csproj" />
+  </Folder>
+  <Project Path="RawBencher/RawBencher.csproj" />
+</Solution>

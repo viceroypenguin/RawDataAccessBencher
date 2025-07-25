@@ -1,4 +1,6 @@
-﻿using EFCore.Bencher;
+﻿#if NET
+
+using EFCore.Bencher;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Collections.Generic;
@@ -66,3 +68,5 @@ namespace RawBencher.Benchers
         }
     }
 }
+
+#endif

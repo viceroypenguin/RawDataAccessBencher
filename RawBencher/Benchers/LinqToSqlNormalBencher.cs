@@ -1,4 +1,6 @@
-﻿using System;
+﻿#if NETFRAMEWORK
+
+using System;
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
@@ -108,3 +110,5 @@ namespace RawBencher.Benchers
 		}
 	}
 }
+
+#endif
