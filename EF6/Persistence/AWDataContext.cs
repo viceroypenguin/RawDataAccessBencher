@@ -12,11 +12,11 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using EF6.Bencher.EntityClasses;
+using System.Data.Entity.SqlServer;
 
 namespace EF6.Bencher
 {
-	/// <summary>Class which represents the DataContext for the project / group 'AW'</summary>
-	public partial class AWDataContext : DbContext 
+    public partial class AWDataContext : DbContext 
 	{
 		#region Extensibility Method Definitions
 		partial void OnContextCreated();
@@ -24,12 +24,6 @@ namespace EF6.Bencher
 		
 		#region Class Member Declarations
 		#endregion
-		
-		/// <summary>Initializes a new instance of the <see cref="AWDataContext"/> class using the connection string found in the 'AW' section of the application configuration file.</summary>
-		public AWDataContext() : base("name=EF.ConnectionString.SQL Server (SqlClient)")
-		{
-			Initialize();
-		}
 		
 		/// <summary>Initializes a new instance of the <see cref="AWDataContext"/> class</summary>
 		public AWDataContext(string connectionString) : base(connectionString)

@@ -43,7 +43,7 @@ namespace RawBencher.Benchers
         /// <returns>the set fetched</returns>
         public override IEnumerable<EF6.Bencher.EntityClasses.SalesOrderHeader> FetchSet()
         {
-            using (var ctx = new AWDataContext())
+            using (var ctx = new AWDataContext(ConnectionStringToUse))
             {
                 return ctx.SalesOrderHeaders.ToList();
             }
@@ -128,13 +128,9 @@ namespace RawBencher.Benchers
             return CreateFrameworkName("Entity Framework v{0} (v{1})", typeof(System.Data.Entity.DbContext));
         }
 
-        #region Properties
-
         /// <summary>
         /// Gets or sets the connection string to use
         /// </summary>
         public string ConnectionStringToUse { get; set; }
-
-        #endregion
     }
 }

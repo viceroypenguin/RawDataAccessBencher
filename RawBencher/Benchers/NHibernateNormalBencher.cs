@@ -22,13 +22,14 @@ namespace RawBencher.Benchers
 		{
 		}
 
+		public string ConnectionStringToUse { get; set; }
 
-		/// <summary>
-		/// Fetches the individual element
-		/// </summary>
-		/// <param name="key">The key of the element to fetch.</param>
-		/// <returns>The fetched element, or null if not found</returns>
-		public override NH.Bencher.EntityClasses.SalesOrderHeader FetchIndividual(int key)
+        /// <summary>
+        /// Fetches the individual element
+        /// </summary>
+        /// <param name="key">The key of the element to fetch.</param>
+        /// <returns>The fetched element, or null if not found</returns>
+        public override NH.Bencher.EntityClasses.SalesOrderHeader FetchIndividual(int key)
 		{
 			using(var session = SessionManager.OpenSession())
 			{

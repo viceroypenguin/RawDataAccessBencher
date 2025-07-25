@@ -3,23 +3,36 @@
 		<TargetFrameworks>net8.0;net48</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="appsettings.local.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Dapper" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" />
 		<PackageReference Include="Microsoft.Data.SqlClient" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" />
 		<PackageReference Include="Microsoft.Extensions.PlatformAbstractions" />
 		<PackageReference Include="NPoco" />
 		<PackageReference Include="NPoco.SqlServer" />
 		<PackageReference Include="PetaPoco.Compiled" />
 		<PackageReference Include="RepoDb.SqlServer" />
 		<PackageReference Include="ServiceStack.OrmLite.SqlServer" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" />
 		<PackageReference Include="System.Data.SqlClient" />
 		<PackageReference Include="Tortuga.Anchor" />
 		<PackageReference Include="Tortuga.Chain.CompiledMaterializers" />
 		<PackageReference Include="Tortuga.Chain.Core" />
 		<PackageReference Include="Tortuga.Chain.SqlServer" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<ProjectReference Include="..\EF6\Model\EF6.Bencher.Model.csproj" />
 		<ProjectReference Include="..\EF6\Persistence\EF6.Bencher.Persistence.csproj" />
@@ -31,11 +44,12 @@
 		<ProjectReference Include="..\NH\DAL\Model\NH.Bencher.Model.csproj" />
 		<ProjectReference Include="..\NH\DAL\Persistence\NH.Bencher.Persistence.csproj" />
 	</ItemGroup>
+	
 	<ItemGroup Condition="$(TargetFramework) == 'net48'">
-		<Reference Include="System.Configuration" />
 		<Reference Include="System.Data.Linq" />
 		<ProjectReference Include="..\L2S\DAL\L2S.Bencher.csproj" />
 	</ItemGroup>
+	
 	<ItemGroup Condition="$(TargetFramework) == 'net8.0'">
 		<ProjectReference Include="..\EFCore\EFCore.Dtos.Persistence\EFCore.Dtos.Persistence.csproj" />
 		<ProjectReference Include="..\EFCore\EFCore.Dtos\EFCore.Dtos.csproj" />

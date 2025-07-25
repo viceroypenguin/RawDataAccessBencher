@@ -21,6 +21,7 @@ namespace RawBencher.Benchers
 		{
 		}
 
+		public string ConnectionStringToUse { get; set; }
 
 		/// <summary>
 		/// Fetches the individual element
@@ -29,7 +30,7 @@ namespace RawBencher.Benchers
 		/// <returns>The fetched element, or null if not found</returns>
 		public override dynamic FetchIndividual(int key)
 		{
-			return new MassiveSalesOrderHeaders().Single(key);
+			return new MassiveSalesOrderHeaders(ConnectionStringToUse).Single(key);
 		}
 
 
@@ -39,7 +40,7 @@ namespace RawBencher.Benchers
 		/// <returns>the set fetched</returns>
 		public override IEnumerable<dynamic> FetchSet()
 		{
-			return new MassiveSalesOrderHeaders().All().ToList();
+			return new MassiveSalesOrderHeaders(ConnectionStringToUse).All().ToList();
 		}
 
 
@@ -52,19 +53,12 @@ namespace RawBencher.Benchers
 		{
 			return "Massive using dynamic class";
 		}
-		
-		#region Properties
-		/// <summary>
-		/// Gets or sets the connection string to use
-		/// </summary>
-		public string ConnectionStringToUse { get; set; }
-		#endregion
 	}
 
 
 	public class MassiveSalesOrderHeaders : DynamicModel
 	{
-		public MassiveSalesOrderHeaders():base("AdventureWorks.ConnectionString.SQL Server (SqlClient)", "Sales.SalesOrderHeader", "SalesOrderID")
+		public MassiveSalesOrderHeaders(string connectionString):base(connectionString, "Sales.SalesOrderHeader", "SalesOrderID")
 		{
 		}
 	}
