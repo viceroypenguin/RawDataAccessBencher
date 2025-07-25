@@ -4,7 +4,7 @@
 		<RootNamespace>NH.Bencher</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Iesi.Collections" Version="4.0.5" />
-		<PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
+		<PackageReference Include="Iesi.Collections" />
+		<PackageReference Include="Microsoft.SqlServer.Types" />
 	</ItemGroup>
 </Project>

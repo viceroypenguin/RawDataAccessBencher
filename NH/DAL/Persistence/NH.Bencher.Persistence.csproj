@@ -12,10 +12,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Antlr3.Runtime" Version="3.5.1" />
-		<PackageReference Include="Iesi.Collections" Version="4.0.5" />
-		<PackageReference Include="NHibernate" Version="5.4.7" />
-		<PackageReference Include="Remotion.Linq" Version="2.2.0" />
-		<PackageReference Include="Remotion.Linq.EagerFetching" Version="2.2.0" />
+		<PackageReference Include="Antlr3.Runtime" />
+		<PackageReference Include="Iesi.Collections" />
+		<PackageReference Include="NHibernate" />
+		<PackageReference Include="Remotion.Linq" />
+		<PackageReference Include="Remotion.Linq.EagerFetching" />
 	</ItemGroup>
 </Project>

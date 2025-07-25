@@ -4,24 +4,21 @@
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Dapper" Version="2.1.24" />
-		<PackageReference Include="EntityFramework" Version="6.4.4" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.8.0" />
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
-		<PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
-		<PackageReference Include="NHibernate" Version="5.4.7" />
-		<PackageReference Include="NPoco" Version="5.7.1" />
-		<PackageReference Include="NPoco.SqlServer" Version="5.7.1" />
-		<PackageReference Include="PetaPoco.Compiled" Version="6.0.617" />
-		<PackageReference Include="RepoDb.SqlServer" Version="1.13.1" />
-		<PackageReference Include="SD.LLBLGen.Pro.DQE.SqlServer" Version="5.11.0" />
-		<PackageReference Include="ServiceStack.OrmLite.SqlServer" Version="8.0.0" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
-		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-		<PackageReference Include="Tortuga.Anchor" Version="4.1.0" />
-		<PackageReference Include="Tortuga.Chain.CompiledMaterializers" Version="4.4.0" />
-		<PackageReference Include="Tortuga.Chain.Core" Version="4.4.0" />
-		<PackageReference Include="Tortuga.Chain.SqlServer" Version="4.4.1" />
+		<PackageReference Include="Dapper" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" />
+		<PackageReference Include="Microsoft.Data.SqlClient" />
+		<PackageReference Include="Microsoft.Extensions.PlatformAbstractions" />
+		<PackageReference Include="NPoco" />
+		<PackageReference Include="NPoco.SqlServer" />
+		<PackageReference Include="PetaPoco.Compiled" />
+		<PackageReference Include="RepoDb.SqlServer" />
+		<PackageReference Include="ServiceStack.OrmLite.SqlServer" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" />
+		<PackageReference Include="System.Data.SqlClient" />
+		<PackageReference Include="Tortuga.Anchor" />
+		<PackageReference Include="Tortuga.Chain.CompiledMaterializers" />
+		<PackageReference Include="Tortuga.Chain.Core" />
+		<PackageReference Include="Tortuga.Chain.SqlServer" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\EF6\Model\EF6.Bencher.Model.csproj" />
